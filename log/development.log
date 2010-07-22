@@ -1,0 +1,250 @@
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-07-13 16:14:32) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 69ms (View: 9, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100713080057)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100713080057')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-07-13 17:02:41) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 45ms (View: 20, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 17:03:21) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 48ms (View: 45, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-13 17:03:26) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 17:03:29) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-13 17:04:04) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 22ms (View: 3, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-13 17:04:23) [POST]
+  Parameters: {"authenticity_token"=>"WDsxhd8WoNS5kUulpDhAFTycZth5YYXAoCTDhU1zNac=", "user"=>{"name"=>"Prasad Barve", "email"=>"psbarve@gmail.com"}, "commit"=>"Create"}
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES('Prasad Barve', 'psbarve@gmail.com', '2010-07-13 08:04:23', '2010-07-13 08:04:23')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-13 17:04:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 17:05:25) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100713080057)
+Migrating to CreateMicroposts (20100713081421)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100713081421')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-13 17:15:24) [GET]
+
+ActionController::RoutingError (No route matches "/micropost" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-13 17:15:33) [GET]
+
+ActionController::RoutingError (No route matches "/Micropost" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/prasadbarve/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 17:15:43) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-13 17:16:03) [GET]
+  [4;35;1mMicropost Load (0.2ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-07-13 17:16:06) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-07-13 17:16:40) [POST]
+  Parameters: {"authenticity_token"=>"WDsxhd8WoNS5kUulpDhAFTycZth5YYXAoCTDhU1zNac=", "micropost"=>{"content"=>"Test micropost", "user_id"=>"100"}, "commit"=>"Create"}
+  [4;36;1mMicropost Create (0.2ms)[0m   [0;1mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES('Test micropost', '100', '2010-07-13 08:16:40', '2010-07-13 08:16:40')[0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-07-13 17:16:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.1ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-13 17:16:49) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-13 17:17:01) [GET]
+  [4;35;1mMicropost Load (0.2ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-13 17:26:34) [GET]
+  [4;36;1mMicropost Load (0.4ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 31ms (View: 28, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-07-13 17:26:37) [GET]
+  [4;35;1mMicropost Load (0.3ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-07-13 17:26:40) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 27ms (View: 23, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-07-13 17:27:23) [POST]
+  Parameters: {"authenticity_token"=>"WDsxhd8WoNS5kUulpDhAFTycZth5YYXAoCTDhU1zNac=", "micropost"=>{"content"=>"111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111", "user_id"=>"500"}, "commit"=>"Create"}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/microposts]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-07-16 09:43:23) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 52ms (View: 14, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 09:43:43) [GET]
+  [4;36;1mUser Load (2.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 57ms (View: 51, DB: 3) | 200 OK [http://localhost/users]
