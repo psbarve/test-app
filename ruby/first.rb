@@ -19,5 +19,3 @@ TkLabel.new(test)do
 end
 Tk.mainloop
 
-
-
